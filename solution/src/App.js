@@ -1,23 +1,20 @@
-import logo from './logo.svg';
+import React, {useState} from 'react';
 import './App.css';
+import Form from './components/Form';
+import DataTable from './components/DataTable';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 function App() {
+  const [entries, setEntries] = useState([]);
+
+  const addEntry = (newEntry) => {
+    setEntries([...entries, newEntry]);
+  };
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className='App'>
+      <Form addEntry={addEntry} />
+      <DataTable entries={entries}/>
     </div>
   );
 }
