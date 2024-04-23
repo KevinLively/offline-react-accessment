@@ -1,5 +1,6 @@
 .App {
   text-align: center;
+  margin-left: 30%;
 }
 
 .App-logo {
@@ -28,11 +29,23 @@
   color: #61dafb;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+form {
+  margin: 20px;
+  text-align: left;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+input, select, button {
+  margin-bottom: 20px;
+}
+
+input, select, table{
+  max-width: 40%;
+}
+.error {
+  color: red;
 }
